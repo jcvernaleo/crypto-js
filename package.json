@@ -1,0 +1,27 @@
+{
+  "name": "crypto-js",
+  "version": "1.0.0",
+  "description": "Crypto functions",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcvernaleo/crypto-js.git"
+  },
+  "keywords": [
+    "blake256",
+    "crypto"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jcvernaleo/crypto-js/issues"
+  },
+  "homepage": "https://github.com/jcvernaleo/crypto-js#readme"
+}

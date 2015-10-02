@@ -1,7 +1,0 @@
-#labels Featured
-= Special Thanks To =
-
- * Paul Johnston
- * Angel Marin
- * Google
- * YUI

@@ -1,8 +1,9 @@
 {
   "name": "crypto-js",
+  "privat": true,
   "version": "1.0.0",
   "description": "Crypto functions",
-  "main": "index.js",
+  "main": "src/blake.js",
   "directories": {
     "doc": "docs",
     "test": "test"

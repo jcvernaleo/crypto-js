@@ -9,7 +9,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./test/blake256_test.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,9 @@
   "bugs": {
     "url": "https://github.com/jcvernaleo/crypto-js/issues"
   },
-  "homepage": "https://github.com/jcvernaleo/crypto-js#readme"
+  "homepage": "https://github.com/jcvernaleo/crypto-js#readme",
+  "dependencies": {
+    "chai": "^3.3.0",
+    "expect": "^1.12.0"
+  }
 }

@@ -1,6 +1,6 @@
 {
   "name": "crypto-js",
-  "privat": true,
+  "private": true,
   "version": "1.0.0",
   "description": "Crypto functions",
   "main": "src/blake.js",

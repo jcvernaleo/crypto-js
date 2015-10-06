@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/jcvernaleo/crypto-js#readme",
   "dependencies": {
-    "chai": "^3.3.0",
     "expect": "^1.12.0"
   }
 }

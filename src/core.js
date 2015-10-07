@@ -1,7 +1,7 @@
 /**
  * CryptoJS core components.
  */
-var CryptoJS = CryptoJS || (function () {
+var CryptoJS = function () {
     /**
      * CryptoJS namespace.
      */
@@ -515,4 +515,5 @@ var CryptoJS = CryptoJS || (function () {
     var C_algo = C.algo = {};
 
     return C;
-}());
+}();
+exports.WordArray = CryptoJS.C_lib_WordArray;

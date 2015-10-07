@@ -1,6 +1,6 @@
-(function () {
-    // Shortcuts
-    var C = CryptoJS;
+var C = require("./core.js");
+
+// Shortcuts
     var C_lib = C.lib;
     var C_lib_WordArray = C_lib.WordArray;
     var C_lib_Hash = C_lib.Hash;
@@ -150,4 +150,3 @@
     // Helpers
     C.BLAKE256 = C_lib_Hash._createHelper(C_algo_BLAKE256);
     C.HMAC_BLAKE256 = C_lib_Hash._createHmacHelper(C_algo_BLAKE256);
-}());

@@ -674,9 +674,9 @@ var helpers = require('./helpers');
 
 var core_blake256 = function(data) {
     var HASH = new Array();
-    var res = C.BLAKE256(data);
-
-    return HASH;
+    var res = C.BLAKE256(data).toString();
+    var arr = res.split("");
+    return HASH.concat(arr);
 }
 
 var BLAKE256buff = function(buf) {

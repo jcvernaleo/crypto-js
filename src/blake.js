@@ -672,14 +672,21 @@ var CryptoJS = function () {
 var helpers = require('./helpers');
 
 
-var core_blake256 = function(m, l) {
+var core_blake256 = function(data) {
     var HASH = new Array();
+    var res = C.BLAKE256(data);
 
     return HASH;
 }
 
+var BLAKE256buff = function(buf) {
+  return helpers.hash(buf, core_blake256, 32, true);
+};
+
 exports.CryptoJS = C;
 exports.BLAKE256 = C.BLAKE256;
-exports.BLAKE256buff = function BLAKE256buff(buf) {
-  return helpers.hash(buf, core_blake256, 32, true);
+exports.BLAKE256buff = BLAKE256buff;
+
+exports.blake256 = function(data) {
+    return new Buffer(BLAKE256buff().update(data).digest('binary'), 'binary');
 };

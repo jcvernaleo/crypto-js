@@ -683,6 +683,25 @@ var BLAKE256buff = function(buf) {
   return helpers.hash(buf, core_blake256, 32, true);
 };
 
+var Buffer = require('buffer').Buffer;
+var intSize = 4;
+var zeroBuffer = new Buffer(intSize); zeroBuffer.fill(0);
+var chrsz = 8;
+
+function toArray(buf, bigEndian) {
+  if ((buf.length % intSize) !== 0) {
+    var len = buf.length + (intSize - (buf.length % intSize));
+    buf = Buffer.concat([buf, zeroBuffer], len);
+  }
+
+  var arr = [];
+  var fn = bigEndian ? buf.readInt32BE : buf.readInt32LE;
+  for (var i = 0; i < buf.length; i += intSize) {
+    arr.push(fn.call(buf, i));
+  }
+  return arr;
+}
+
 function toBuffer(arr, size, bigEndian) {
   var buf = new Buffer(size);
   var fn = bigEndian ? buf.writeInt32BE : buf.writeInt32LE;

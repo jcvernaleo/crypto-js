@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/jcvernaleo/crypto-js#readme",
   "dependencies": {
+    "buffer": "^3.5.1",
     "expect": "^1.12.0"
   }
 }

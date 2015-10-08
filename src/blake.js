@@ -683,6 +683,21 @@ var BLAKE256buff = function(buf) {
   return helpers.hash(buf, core_blake256, 32, true);
 };
 
+function toBuffer(arr, size, bigEndian) {
+  var buf = new Buffer(size);
+  var fn = bigEndian ? buf.writeInt32BE : buf.writeInt32LE;
+  for (var i = 0; i < arr.length; i++) {
+    fn.call(buf, arr[i], i * 4, true);
+  }
+  return buf;
+}
+
+function hash(buf, fn, hashSize, bigEndian) {
+  if (!Buffer.isBuffer(buf)) buf = new Buffer(buf);
+  var arr = fn(toArray(buf, bigEndian), buf.length * chrsz);
+  return toBuffer(arr, hashSize, bigEndian);
+}
+
 exports.CryptoJS = C;
 exports.BLAKE256 = C.BLAKE256;
 exports.BLAKE256buff = BLAKE256buff;

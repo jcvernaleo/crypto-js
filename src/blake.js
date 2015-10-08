@@ -687,6 +687,10 @@ exports.CryptoJS = C;
 exports.BLAKE256 = C.BLAKE256;
 exports.BLAKE256buff = BLAKE256buff;
 
+//var sha256 = exports.sha256 = function(data) {
+//  return new Buffer(crypto.createHash('sha256').update(data).digest('binary'), 'binary');
+//};
+
 exports.blake256 = function(data) {
     return new Buffer(BLAKE256buff().update(data).digest('binary'), 'binary');
 };
